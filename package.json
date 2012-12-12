@@ -1,6 +1,6 @@
 {
   "name": "hookable",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Enable hookable functions on an object.",
   "keywords": ["hook", "plugin"],
   "author": "RGBboy <me@rgbboy.com>",
