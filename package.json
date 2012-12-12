@@ -1,0 +1,22 @@
+{
+  "name": "hookable",
+  "version": "0.0.1",
+  "description": "Enable hookable functions on an object.",
+  "keywords": ["hook", "plugin"],
+  "author": "RGBboy <me@rgbboy.com>",
+  "main": "index.js",
+  "engines": {
+    "node": "0.8.x"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "mocha": "1.5.x",
+    "should": "1.2.x"
+  },
+  "scripts" : {
+    "test" : "make test",
+    "unit" : "make unit",
+    "spec" : "make spec"
+  }
+}
