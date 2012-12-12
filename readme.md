@@ -8,7 +8,7 @@
 
   Works with Express 3.0.x
 
-    $ npm install git://github.com/RGBboy/hookable.git
+    $ npm install hookable
 
 ## Usage
 
