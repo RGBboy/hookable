@@ -12,7 +12,7 @@
 
 ## Usage
 
-  Hookable adds functionality to wrap a function with `pre` and `post` hooks
+  Hookable adds functionality to wrap a function with `before` and `after` hooks
 
 ``` javascript
 
@@ -31,12 +31,12 @@ hookable(myObject);
 myObject.add = myObject.hook('add', myObject.add);
 
 // define a function to fire before the original
-myObject.pre('add', function (a, b) {
+myObject.before('add', function (a, b) {
   console.log('.add is about to fire with ' + a + ' and ' + b);
 });
 
 // define a function to fire after the original
-myObject.post('add', function (a, b) {
+myObject.after('add', function (a, b) {
   console.log('.add has fired with ' + a + ' and ' + b);
 });
 ```

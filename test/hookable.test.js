@@ -42,25 +42,25 @@ describe('Hookable', function () {
 
     });
 
-    describe('.pre', function () {
+    describe('.before', function () {
 
       it('should be a function', function (done) {
-        testObject.pre.should.be.a.function;
+        testObject.before.should.be.a.function;
         done();
       });
 
       it('should return the object', function (done) {
-        testObject.pre('test', function () {}).should.equal(testObject);
+        testObject.before('test', function () {}).should.equal(testObject);
         done();
       });
 
       it('should fire the passed function before the hooked function is called', function (done) {
         var counter = 0,
-            preTestFunction1 = function () {
+            beforeTestFunction1 = function () {
               counter.should.equal(0);
               counter += 1;
             },
-            preTestFunction2 = function () {
+            beforeTestFunction2 = function () {
               counter.should.equal(1);
               counter += 1;
             };
@@ -69,32 +69,32 @@ describe('Hookable', function () {
           done();
         };
         testObject.testFunction = testObject.hook('test', testObject.testFunction)
-        testObject.pre('test', preTestFunction1);
-        testObject.pre('test', preTestFunction2);
+        testObject.before('test', beforeTestFunction1);
+        testObject.before('test', beforeTestFunction2);
         testObject.testFunction();
       });
 
     });
 
-    describe('.post', function () {
+    describe('.after', function () {
 
       it('should be a function', function (done) {
-        testObject.post.should.be.a.function;
+        testObject.after.should.be.a.function;
         done();
       });
 
       it('should return the object', function (done) {
-        testObject.pre('test', function () {}).should.equal(testObject);
+        testObject.before('test', function () {}).should.equal(testObject);
         done();
       });
 
       it('should fire the passed function after the hooked function is called', function (done) {
         var counter = 0,
-            postTestFunction1 = function () {
+            afterTestFunction1 = function () {
               counter.should.equal(1);
               counter += 1;
             },
-            postTestFunction2 = function () {
+            afterTestFunction2 = function () {
               counter.should.equal(2);
               done();
             };
@@ -103,8 +103,8 @@ describe('Hookable', function () {
           counter += 1;
         };
         testObject.testFunction = testObject.hook('test', testObject.testFunction)
-        testObject.post('test', postTestFunction1);
-        testObject.post('test', postTestFunction2);
+        testObject.after('test', afterTestFunction1);
+        testObject.after('test', afterTestFunction2);
         testObject.testFunction();
       });
 
