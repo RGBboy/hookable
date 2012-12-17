@@ -4,6 +4,10 @@
   "description": "Enable hookable functions on an object.",
   "keywords": ["hook", "plugin"],
   "author": "RGBboy <me@rgbboy.com>",
+  "repository" : {
+    "type" : "git",
+    "url" : "http://github.com/RGBboy/hookable"
+  },
   "main": "index.js",
   "engines": {
     "node": "0.8.x"
